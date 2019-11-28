@@ -21,16 +21,13 @@ public class NavClient {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-            
-                public static void main(String[] args) throws IOException {
+public static void main(String[] args) throws IOException {
         String ip;
-        
         do {
             System.out.println("Inserisci l'indirizzo ip o il dominio del server");
             Scanner input = new Scanner(System.in);
             ip = input.nextLine();
  
-
             try (Socket socket = new Socket(ip, 4444)) {
                 ClientGame cg = new ClientGame(socket);
                 
